@@ -1,0 +1,40 @@
+@import 'mixins';
+@import 'reset';
+@import 'main';
+@import 'variables';
+@import '../fonts/fonts';
+
+/** BLOCKS **/
+
+@import 'header/header';
+@import 'header/header-media';
+
+/**/
+
+@import 'slider-sections/section';
+@import 'slider-sections/section-media';
+
+/**/
+
+@import 'causes/causes';
+@import 'causes/causes-media';
+
+/**/
+
+@import 'reviews/reviews';
+@import 'reviews/reviews-media';
+
+/**/
+
+@import 'form-area/form';
+@import 'form-area/form-media';
+
+/**/
+
+@import 'about/about';
+@import 'about/about-media';
+
+/**/
+
+@import 'footer/footer';
+@import 'footer/footer-media';

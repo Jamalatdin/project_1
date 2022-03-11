@@ -1,0 +1,55 @@
+    .reviews {
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        &__item {
+            border: 1px solid rgb(230, 230, 230);
+            padding: 20px 10px;
+            width: 100%;
+        }
+        &__top {
+            @include flex(row, space-between, center);
+        }
+        &__image {
+            width: 106px;
+            height: 142px;
+            padding-bottom: 30px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__name {
+            @include font($font-Opensans, 13px, 800, left, capitalize, $color-review-name);
+        }
+        &__date {
+            @include font($font-Opensans, 12px, 500, left, none, rgb(153, 153, 153));
+            padding-top: 5px;
+        }
+        &__text {
+            @include font($font-Opensans, 14px, 500, left, none, $color-black);
+            padding: 20px 0;
+            line-height: 1.2;
+        }
+        &__like {
+            @include flex(row, flex-start, center);
+            width: 100%;
+            border-top: 1px solid rgb(230, 230, 230);
+            padding: 10px 0;
+            i {
+                margin-right: 20px;
+                color: #b5c7df;
+            }
+        }
+        &__btn {
+            width: 100%;
+            @include flex(row, center, center);
+            margin: 10px auto;
+        }
+        &__btn-link {
+            border-radius: 4px;
+            width: 100%;
+            padding: 10px;
+            background-color: $color-review-name;
+            @include font($font-Opensans, 16px, 800, center, capitalize, $color-white);
+        }
+    }

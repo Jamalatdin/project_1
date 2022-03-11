@@ -1,0 +1,23 @@
+@media (min-width:576px) {
+    .causes {
+        &__item {
+            width: 47%;
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .causes {
+        &__item {
+            width: 32%;
+        }
+    }
+}
+
+@media (min-width:1140px) {
+    .causes {
+        &__item {
+            width: 19%;
+        }
+    }
+}

@@ -1,0 +1,160 @@
+section {
+    .section__name {
+        @include font($font-Lemon, 40px, 500, center, capitalize, $color-slider-title);
+        padding: 35px 0;
+        @include flex(row, center, center);
+        img {
+            width: 76px;
+            height: 32px;
+        }
+        span {
+            margin: 0 10px;
+        }
+    }
+    .container {
+        @include flex(column, space-between, center);
+    }
+    .section__slider {
+        margin: 50px auto;
+        width: 100%;
+    }
+    .slider__item {
+        @include flex(column, space-between, center);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 13px;
+        overflow: hidden;
+        margin: 10px;
+    }
+    .slider__title {
+        @include font($font-Opensans, 20px, 800, center, capitalize, $color-black);
+        padding: 20px 0;
+    }
+    .slider__subtitle {
+        @include font($font-Opensans, 14px, 500, center, none, $color-black);
+    }
+    .slider__price {
+        @include font($font-Opensans, 20px, 800, center, none, $color-black);
+        padding: 20px 0;
+        sup {
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    .slider__number:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f056";
+        margin-right: 10px;
+    }
+    .slider__number:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f055";
+        margin-left: 10px;
+    }
+    .slider__info {
+        @include flex(row, space-around, center);
+    }
+    .slider__btn {
+        @include flex(row, center, center);
+    }
+    .slider__btn-link {
+        padding: 15px 0;
+        width: 75%;
+        @include font($font-Opensans, 16px, 600, center, uppercase, $color-white);
+        background-color: $color-header-btn;
+        border-radius: 3px;
+        margin: 30px auto;
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f07a";
+            margin-left: 20px;
+        }
+    }
+    .dots-section {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-top: 10px;
+        button {
+            background-color: gray;
+            border-radius: 50%;
+            font-size: 0;
+            height: 10px;
+            width: 10px;
+            margin: 5px 10px;
+            outline: none;
+        }
+    }
+    .dots-section li[class="slick-active"] button {
+        background-color: $color-green;
+        border: none;
+    }
+    .section__choose {
+        width: 100%;
+        input[type="radio"] {
+            display: none;
+        }
+        label {
+            @include font($font-Opensans, 16px, 800, left, capitalize, rgb(153, 153, 153));
+            padding-right: 50px;
+            cursor: pointer;
+        }
+        input:checked+label {
+            color: $color-header-btn;
+        }
+    }
+    .slider__img {
+        position: relative;
+        overflow: hidden;
+        .new {
+            @include font($font-Opensans, 16px, 800, left, lowercase, $color-white);
+            position: absolute;
+            background-color: $color-green;
+            padding: 5px 40px;
+            top: 10px;
+            left: -30px;
+            transform: rotate(-45deg);
+        }
+        .fire {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 35px;
+            height: 38px;
+            padding: 8px;
+            background-color: $color-header-btn;
+            border-radius: 50%;
+        }
+    }
+    .slider__count {
+        width: 80%;
+        font-family: $font-Opensans;
+        margin: 0 auto;
+        padding: 10px 0;
+        .add {
+            @include flex(row, space-between, center);
+        }
+        .sauce__add {
+            padding: 2px 5px;
+            color: $color-white;
+            background-color: $color-header-btn;
+        }
+        select {
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+            background-color: #eee;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.new-sale {
+    background-image: url(../../img/new-sale-bgimage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

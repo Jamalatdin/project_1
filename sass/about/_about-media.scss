@@ -1,0 +1,34 @@
+@media (min-width:992px) {
+    .about {
+        .section__name {
+            img {
+                display: inline-block;
+            }
+        }
+        .section__content {
+            @include flex(row, space-between, flex-start);
+        }
+        .section__img {
+            display: block;
+            width: 20%;
+        }
+        .section__text {
+            width: 77%;
+            p {
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+        }
+        .section__title {
+            width: 100%;
+            text-align: left;
+            font-size: 20px;
+        }
+        .next__text {
+            display: block;
+        }
+        .section__text label {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.form {
+    background-image: url(../img/form320.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    .section__quest {
+        @include font($font-Opensans, 14px, 300, left, none, $color-white);
+        width: 100%;
+    }
+    .section__title {
+        @include font($font-Lemon, 47px, 500, left, none, $color-white);
+        padding: 20px 0;
+        width: 100%;
+    }
+    .form__name,
+    .form__tel {
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 1px solid $color-white;
+        outline: none;
+        padding: 7px;
+        color: $color-white;
+        font-size: 16px;
+        font-family: $font-Opensans;
+        &::placeholder {
+            @include font($font-Opensans, 14px, 300, left, none, $color-white);
+        }
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    .form__tel {
+        margin-top: 20px;
+    }
+    .form__btn {
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 4px;
+        @include font($font-Opensans, 16px, 500, center, uppercase, $color-white);
+        background-color: $color-header-btn;
+        margin: 20px 0;
+    }
+    .form__agree {
+        @include font($font-Opensans, 14px, 300, left, none, $color-white);
+        line-height: 1.2;
+    }
+}

@@ -1,0 +1,195 @@
+    .header {
+        //header TOP START
+        &__info,
+        &__nav {
+            display: none;
+        }
+        &__top {
+            padding-top: 20px;
+            .container {
+                @include flex(row, space-between, stretch);
+            }
+        }
+        &__user {
+            @include flex(row, space-between, center);
+            .user__link {
+                padding-right: 20px;
+            }
+        }
+        &__logo {
+            padding-left: 20px;
+            @include flex(row, space-between, center);
+        }
+        .logo-txt {
+            display: none;
+        }
+        .menu-icon {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 0;
+            position: relative;
+            user-select: none;
+            z-index: 7;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .menu-btn {
+            display: none;
+        }
+        .menu-icon .navicon {
+            background-color: $color-green;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: all .5s ease-in-out;
+            width: 20px;
+        }
+        .menu-icon .navicon:before,
+        .menu-icon .navicon:after {
+            background-color: $color-green;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .5s ease-in-out;
+            width: 100%;
+        }
+        .menu-icon .navicon:before {
+            top: 5px;
+        }
+        .menu-icon .navicon:after {
+            top: -5px;
+        }
+        .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+            top: 0;
+            background-color: $color-green;
+        }
+        .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+            top: 0;
+            background-color: $color-green;
+        }
+        .menu-btn:checked~.menu-icon .navicon {
+            background-color: transparent;
+        }
+        .menu__body {
+            padding: 100px 0 50px;
+            position: fixed;
+            top: 0;
+            left: -100vw;
+            width: 100vw;
+            height: 100vh;
+            transition: 1s;
+            z-index: 5;
+            background-color: $color-white;
+            @include flex(column, space-between, center);
+        }
+        &__number {
+            @include flex(column, space-between, flex-start);
+        }
+        &__address,
+        &__email {
+            a {
+                @include font($font-Opensans, 14px, 500, center, none, $color-black);
+            }
+            i {
+                color: $color-green;
+            }
+        }
+        &__number {
+            a {
+                @include font($font-Opensans, 16px, 800, center, none, $color-black);
+            }
+            span {
+                @include font($font-Opensans, 9px, 800, left, none, $color-black);
+            }
+        }
+        &__top-btn {
+            margin-bottom: 10px;
+            a {
+                padding: 10px;
+                border: 2px solid $color-green;
+                border-radius: 3px;
+                @include font($font-Opensans, 12px, 800, left, uppercase, $color-green);
+                &:hover {
+                    background-color: $color-green;
+                    color: $color-white;
+                }
+            }
+        }
+        #menu-btn:checked~.menu__body {
+            transform: translateX(100vw);
+            transition: .5s;
+        }
+        .menu__list {
+            @include flex(column, space-between, center);
+        }
+        .menu__item {
+            padding-bottom: 40px;
+        }
+        .menu__link {
+            @include font($font-Opensans, 20px, 500, left, uppercase, $color-black);
+            transition: .5s;
+            &:hover {
+                color: $color-green;
+                transition: .5s;
+            }
+        }
+        //header TOP END
+        //header BANNER START
+        .slider__item {
+            background-image: url(../img/header-slider.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 50px 0;
+            position: relative;
+        }
+        .slider__top {
+            @include flex(row, flex-start, flex-end);
+        }
+        .slider__title {
+            @include font($font-Lemon, 45px, none, left, none, $color-banner-title);
+            width: 220px;
+            line-height: 1.2;
+        }
+        .slider__sale {
+            @include font($font-Opensans, 12px, 800, center, uppercase, $color-white);
+            display: inline-block;
+            width: 60px;
+            border-radius: 50%;
+            background-color: $color-red;
+            padding: 20px 2px 15px;
+            line-height: 1.2;
+        }
+        .slider__date {
+            @include font($font-Opensans, 14px, 500, left, none, $color-white);
+            font-style: italic;
+            padding: 10px 0px;
+        }
+        .slider__btn {
+            display: none;
+        }
+        .dots-header {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 10px;
+            button {
+                background-color: transparent;
+                border: 1px solid $color-black;
+                border-radius: 50%;
+                font-size: 0;
+                height: 15px;
+                width: 15px;
+                margin: 5px 10px;
+                outline: none;
+            }
+        }
+        .dots-header li[class="slick-active"] button {
+            background-color: $color-green;
+            border: none;
+        }
+    }

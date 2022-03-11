@@ -1,0 +1,46 @@
+.about {
+    .section__name {
+        img {
+            display: none;
+        }
+    }
+    .section__title {
+        @include font($font-Opensans, 16px, 800, left, none, $color-slider-title);
+        padding: 20px 0;
+        line-height: 1.2;
+    }
+    .section__text {
+        @include font($font-Opensans, 13px, 300, left, none, $color-text);
+        line-height: 1.2;
+        padding: 20px 0;
+    }
+    .section__img {
+        display: none;
+    }
+    label {
+        padding: 10px 20px;
+        background-color: $color-white;
+        color: $color-header-btn;
+        border: 1px solid $color-header-btn;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .next__text {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    input:checked~p {
+        display: block;
+    }
+    input:checked~label {
+        display: none;
+    }
+    .show,
+    .hide {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
